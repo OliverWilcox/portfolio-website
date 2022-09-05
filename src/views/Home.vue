@@ -406,7 +406,7 @@ export default {
     font-size: 4vw;
     line-height: 5vw;
     width: 80vw;
-
+    font-family: sk-modernist;
     font-weight: normal;
   }
 
