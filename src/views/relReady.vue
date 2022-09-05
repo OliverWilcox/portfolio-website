@@ -9,7 +9,7 @@
         {{ post.caseBio }}
       </div>
     </div>
-    <div class="case-picture-one"></div>
+    <div class="case-picture case-pic-one"></div>
     <p class="launch-project-case">In Progress</p>
     <div class="launch-line"></div>
     <div class="about-container-one">
@@ -29,7 +29,9 @@
       sure to use very smooth and gentle animations for the text and other
       elements to capture the relaxing feeling.
     </p>
-    <div class="case-picture-after-project-info"></div>
+    <div class="case-picture case-pic-two"></div>
+    <h1 class="case-pic-header-optional">The use of animation in design</h1>
+    <div class="case-picture case-pic-optional-one"></div>
     <h3 class="section-two-title"></h3>
 
     <p class="section-two-bio"></p>
@@ -60,7 +62,8 @@ const query = `*[slug.current == $slug] {
    caseYear,
    caseClient,
    caseAbout,
-   slug
+   slug,
+   
   }[0]
 `;
 
@@ -149,8 +152,6 @@ export default {
 </script>
 
 <style>
-@media screen and (max-width: 700px) {
-}
 .case-container {
   text-align: left;
   font-family: sk-modernist;
@@ -219,7 +220,7 @@ export default {
   animation: caseRole 0.8s forwards;
   animation-delay: 0.12s;
 }
-.case-picture-one {
+.case-picture {
   position: relative;
   width: 100vw;
   height: 65vw;
@@ -227,6 +228,11 @@ export default {
   margin-top: 80px;
   overflow: hidden;
 }
+
+.case-pic-two {
+  margin-top: 30vw;
+}
+
 .img-one {
   position: relative;
   width: 120%;
@@ -333,12 +339,23 @@ export default {
   margin-left: 8vw;
   width: 84vw;
 }
-.case-picture-after-project-info {
-  width: 100vw;
-  height: 60vw;
-  background: #fff7ee;
-  margin-top: 150px;
+
+.case-pic-header-optional {
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 30vw;
+
+  text-align: left;
+  font-family: sk-modernist-bold;
+  font-weight: normal;
+  margin-left: 8vw;
+  width: 75vw;
 }
+
+.case-pic-optional-one {
+  margin-top: 15vw;
+}
+
 .section-two-title {
   font-weight: normal;
   font-size: 40px;
@@ -488,7 +505,7 @@ export default {
     overflow: hidden;
     transform: translateY(-50%);
   }
-  .case-picture-one {
+  .case-picture {
     position: relative;
     width: 100vw;
     height: 55vw;
