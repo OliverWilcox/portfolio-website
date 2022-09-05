@@ -32,6 +32,7 @@
     <div class="case-picture case-pic-two"></div>
     <h1 class="case-pic-header-optional">The use of animation in design</h1>
     <div class="case-picture case-pic-optional-one"></div>
+    <div class="case-picture case-pic-three"></div>
 
     <router-link to="/Boardroom" style="color: inherit">
       <h1 class="next-project">NEXT PROJECT</h1>
@@ -324,18 +325,22 @@ export default {
 
 .case-pic-header-optional {
   font-weight: normal;
-  font-size: 35px;
+  font-size: 34px;
   margin-top: 30vw;
 
   text-align: left;
   font-family: sk-modernist-bold;
   font-weight: normal;
   margin-left: 8vw;
-  width: 82vw;
+  width: 80vw;
 }
 
 .case-pic-optional-one {
   margin-top: 15vw;
+}
+
+.case-pic-three {
+  margin-top: 8vw;
 }
 
 .section-two-title {
