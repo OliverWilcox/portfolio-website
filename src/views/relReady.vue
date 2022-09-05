@@ -324,14 +324,14 @@ export default {
 
 .case-pic-header-optional {
   font-weight: normal;
-  font-size: 32px;
+  font-size: 35px;
   margin-top: 30vw;
 
   text-align: left;
   font-family: sk-modernist-bold;
   font-weight: normal;
   margin-left: 8vw;
-  width: 75vw;
+  width: 82vw;
 }
 
 .case-pic-optional-one {
