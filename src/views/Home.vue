@@ -250,11 +250,11 @@ export default {
 .place {
   margin-top: -5vw;
   font-size: 1vw;
-  font-weight: bold;
+
   text-align: left;
   pointer-events: none;
   text-transform: none;
-  font-family: sk-modernist;
+  font-family: sk-modernist-bold;
   line-height: 1.5vw;
   width: 35vw;
   margin-left: 5vw;
@@ -266,8 +266,8 @@ export default {
   width: 8vw;
   margin-top: 2vw;
   text-decoration: underline;
-  font-weight: bold;
-  font-family: sk-modernist;
+
+  font-family: sk-modernist-bold;
   cursor: pointer;
 }
 
@@ -278,16 +278,16 @@ export default {
 }
 .section-part p {
   position: absolute;
-  font-family: sk-modernist;
-  font-weight: bold;
+  font-family: sk-modernist-bold;
+
   text-transform: capitalize;
   font-size: 1vw;
 }
 
 .about-section p {
   position: absolute;
-  font-family: sk-modernist;
-  font-weight: bold;
+  font-family: sk-modernist-bold;
+
   text-transform: capitalize;
   font-size: 1vw;
 }

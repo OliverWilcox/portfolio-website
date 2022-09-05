@@ -167,6 +167,7 @@ li a {
   cursor: pointer;
   top: 3vw;
   margin-top: 2vw;
+  font-weight: normal;
   border-bottom: 1px solid rgb(176, 176, 176);
 }
 
@@ -202,7 +203,6 @@ li a {
 .proj-name {
   position: relative;
 
-  font-weight: bold;
   width: 25vw;
   font-size: 1.8vw;
   left: 0vw;
@@ -210,7 +210,7 @@ li a {
   margin-left: -8vw;
   transition: 0.5s;
   z-index: +10;
-  font-family: sk-modernist;
+  font-family: sk-modernist-bold;
 }
 .description {
   position: relative;

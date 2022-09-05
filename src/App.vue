@@ -30,12 +30,23 @@ export default {
   font-family: sk-modernist;
   src: url(GeneralSans-Regular.woff);
 }
+@font-face {
+  font-family: sk-modernist-bold;
+  src: url(GeneralSans-Medium.woff);
+}
 body {
   margin: 0;
   padding: 0;
   background: #e9e9e9;
   scroll-behavior: smooth;
 }
+h1,
+h2,
+h3,
+p {
+  font-weight: normal;
+}
+
 #app {
   font-family: gallery-modern;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +55,7 @@ body {
   color: #1d1d1d;
   margin: 0;
   padding: 0;
-
+  font-weight: normal;
   top: 0;
   position: absolute;
 }
@@ -223,10 +234,9 @@ html {
   line-height: 0;
   margin-top: 80px;
   text-align: left;
-  font-family: sk-modernist;
+  font-family: sk-modernist-bold;
   font-weight: normal;
   margin-left: 8vw;
-  font-weight: bold;
 }
 .project-info-bio {
   font-weight: normal;

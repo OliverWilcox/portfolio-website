@@ -302,8 +302,8 @@ export default {
     right: 3vw;
     top: 4vh;
     font-size: 1.1vw;
-    font-weight: bold;
-    font-family: sk-modernist;
+
+    font-family: sk-modernist-bold;
   }
 
   .nav-titles {
