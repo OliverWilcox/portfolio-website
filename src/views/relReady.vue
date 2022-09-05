@@ -30,12 +30,24 @@
       elements to capture the relaxing feeling.
     </p>
     <div class="case-picture case-pic-two"></div>
-    <h1 class="case-pic-header-optional">The use of animation in design</h1>
+    <h1 class="case-pic-header optional-header">
+      The use of animation in design
+    </h1>
     <div class="case-picture case-pic-optional-one"></div>
     <div class="case-picture case-pic-three"></div>
+    <p class="case-pic-bio">
+      a meditative beach pallete mixed with soft animations built with GSAP
+    </p>
+    <div class="case-picture case-pic-optional-two"></div>
+    <div class="case-picture case-pic-optional-three"></div>
+    <p class="case-pic-bio case-pic-bio-optional">
+      a meditative beach pallete mixed with soft animations built with GSAP
+    </p>
+    <h1 class="case-pic-header">Technologies used: Vue.js, GSAP and Sanity</h1>
+    <div class="case-picture case-pic-four"></div>
 
     <router-link to="/Boardroom" style="color: inherit">
-      <h1 class="next-project">NEXT PROJECT</h1>
+      <h1 class="next-project">Next case</h1>
     </router-link>
   </div>
 </template>
@@ -323,7 +335,7 @@ export default {
   margin-top: 30vw;
 }
 
-.case-pic-header-optional {
+.case-pic-header {
   font-weight: normal;
   font-size: 34px;
   margin-top: 30vw;
@@ -343,102 +355,38 @@ export default {
   margin-top: 8vw;
 }
 
-.section-two-title {
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 40px;
-  display: none;
-  text-align: left;
-  font-family: sk-modernist;
-  font-weight: normal;
-  margin-left: 8vw;
-  width: 300px;
-}
-.section-two-bio {
-  font-weight: normal;
-  font-size: 19px;
-  width: 88vw;
-  margin-left: 6vw;
-  text-align: left;
-  margin-top: 0px;
-  line-height: 25px;
-  display: none;
-  font-family: sk-modernist;
-}
-.animation-pic-one {
-  position: relative;
-  width: 100vw;
-  height: 105vw;
-  background: #fff7ee;
-  margin-top: 150px;
-  overflow: hidden;
-}
-.img-branding {
-  position: relative;
-  width: 190%;
-  left: 55%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.section-two-pic {
-  margin-left: 0vw;
-  width: 100vw;
-  height: 128vw;
-  background: none;
-  margin-top: 20px;
-  margin-left: 0vw;
-  overflow: hidden;
-}
-.img-branding-pics {
-  position: relative;
-  width: 110%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.section-two-pic-one {
-  margin-top: 150px;
+.case-pic-bio {
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+  width: 84vw;
+  font-size: 18px;
 }
 
-.img-after-two {
-  top: 50%;
-  left: 50%;
-  position: relative;
-  width: 115%;
-  transform: translate(-50%, -50%);
+.case-pic-optional-two {
+  margin-top: 30vw;
 }
 
-.section-three-pic {
-  margin-left: 0vw;
-  width: 100vw;
-  height: 58vw;
-  background: #fff7ee;
-  margin-top: 20px;
-  margin-left: 0vw;
+.case-pic-optional-three {
+  margin-top: 8vw;
 }
 
-.section-three-pic-one {
-  margin-top: 150px;
-}
-
-.case-picture-after-section-three {
-  width: 100vw;
-  height: 60vw;
-  background: #fff7ee;
-  margin-top: 150px;
+.case-pic-four {
+  margin-top: 15vw;
 }
 
 .next-project {
   position: relative;
   font-weight: normal;
   margin: auto;
-  margin-top: 145px;
-  line-height: 12vw;
+  text-align: center;
+  margin-top: 120px;
+
   font-size: 11vw;
-  margin-bottom: 120px;
-  overflow: hidden;
+  margin-bottom: 150px;
+
   height: 11vw;
-  transform: translateY(-50%);
+
   text-decoration: underline;
 }
 
