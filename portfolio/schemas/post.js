@@ -56,6 +56,42 @@ export default {
     type: 'string'
     },
     {
+			name: "caseImageOne",
+			title: "Case Image One",
+			type: "image"
+		},
+    {
+			name: "caseImageTwo",
+			title: "Case Image Two",
+			type: "image"
+		},
+    {
+			name: "caseImageThree",
+			title: "Case Image Three",
+			type: "image"
+		},
+    {
+			name: "caseImageFour",
+			title: "Case Image Four",
+			type: "image"
+		},
+    {
+			name: "caseImageOptionalOne",
+			title: "Case Image Optional One",
+			type: "image"
+		},
+    {
+			name: "caseImageOptionalTwo",
+			title: "Case Image Optional Two",
+			type: "image"
+		},
+    {
+			name: "caseImageOptionalThree",
+			title: "Case Image Optional Three",
+			type: "image"
+		},
+    
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

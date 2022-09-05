@@ -9,7 +9,9 @@
         {{ post.caseBio }}
       </div>
     </div>
-    <div class="case-picture case-pic-one"></div>
+    <div class="case-picture case-pic-one">
+      <img :src="imageUrlFor(post.caseImageOne)" alt="" class="case-img" />
+    </div>
     <p class="launch-project-case">In Progress</p>
     <div class="launch-line"></div>
     <div class="about-container-one">
@@ -29,22 +31,55 @@
       sure to use very smooth and gentle animations for the text and other
       elements to capture the relaxing feeling.
     </p>
-    <div class="case-picture case-pic-two"></div>
+    <div class="case-picture case-pic-two">
+      <img :src="imageUrlFor(post.caseImageTwo)" alt="" class="case-img" />
+    </div>
     <h1 class="case-pic-header optional-header">
       The use of animation in design
     </h1>
-    <div class="case-picture case-pic-optional-one"></div>
-    <div class="case-picture case-pic-three"></div>
+    <div
+      class="case-picture case-pic-optional-one"
+      v-if="post.caseImageOptionalOne"
+    >
+      <img
+        :src="imageUrlFor(post.caseImageOptionalOne)"
+        alt=""
+        class="case-img"
+      />
+    </div>
+    <div class="case-picture case-pic-three">
+      <img :src="imageUrlFor(post.caseImageThree)" alt="" class="case-img" />
+    </div>
     <p class="case-pic-bio">
       a meditative beach pallete mixed with soft animations built with GSAP
     </p>
-    <div class="case-picture case-pic-optional-two"></div>
-    <div class="case-picture case-pic-optional-three"></div>
+    <div
+      class="case-picture case-pic-optional-two"
+      v-if="post.caseImageOptionalTwo"
+    >
+      <img
+        :src="imageUrlFor(post.caseImageOptionalTwo)"
+        alt=""
+        class="case-img"
+      />
+    </div>
+    <div
+      class="case-picture case-pic-optional-three"
+      v-if="post.caseImageOptionalThree"
+    >
+      <img
+        :src="imageUrlFor(post.caseImageOptionalThree)"
+        alt=""
+        class="case-img"
+      />
+    </div>
     <p class="case-pic-bio case-pic-bio-optional">
       a meditative beach pallete mixed with soft animations built with GSAP
     </p>
     <h1 class="case-pic-header">Technologies used: Vue.js, GSAP and Sanity</h1>
-    <div class="case-picture case-pic-four"></div>
+    <div class="case-picture case-pic-four">
+      <img :src="imageUrlFor(post.caseImageFour)" alt="" class="case-img" />
+    </div>
 
     <router-link to="/Boardroom" style="color: inherit">
       <h1 class="next-project">Next case</h1>
@@ -56,6 +91,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sanity from "../client";
+import imageUrlBuilder from "@sanity/image-url";
+
+const imageBuilder = imageUrlBuilder(sanity);
 const query = `*[slug.current == $slug] {
    _id,
    caseTitleFull,
@@ -64,6 +102,13 @@ const query = `*[slug.current == $slug] {
    caseYear,
    caseClient,
    caseAbout,
+   caseImageOne,
+   caseImageTwo,
+   caseImageThree,
+   caseImageFour,
+   caseImageOptionalOne,
+   caseImageOptionalTwo,
+   caseImageOptionalThree,
    slug,
    
   }[0]
@@ -149,11 +194,18 @@ export default {
         }
       );
     },
+    imageUrlFor(source) {
+      return imageBuilder.image(source);
+    },
   },
 };
 </script>
 
 <style>
+.case-img {
+  width: 100%;
+  position: relative;
+}
 .case-container {
   text-align: left;
   font-family: sk-modernist;
@@ -225,10 +277,8 @@ export default {
 .case-picture {
   position: relative;
   width: 100vw;
-  height: 65vw;
-  background: rgb(197, 197, 197);
+
   margin-top: 80px;
-  overflow: hidden;
 }
 
 .launch-project-case {
