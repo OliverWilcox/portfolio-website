@@ -413,7 +413,7 @@ export default {
   .in-touch-home {
     font-size: 3.8vw;
     width: 50vw;
-
+    font-family: sk-modernist;
     margin-top: 8vw;
   }
 
