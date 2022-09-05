@@ -32,18 +32,7 @@
     <div class="case-picture case-pic-two"></div>
     <h1 class="case-pic-header-optional">The use of animation in design</h1>
     <div class="case-picture case-pic-optional-one"></div>
-    <h3 class="section-two-title"></h3>
 
-    <p class="section-two-bio"></p>
-
-    <div class="none-for-now">
-      <div class="section-three-pics">
-        <div class="section-three-pic section-three-pic-one"></div>
-        <div class="section-three-pic section-three-pic-two"></div>
-        <div class="section-three-pic section-three-pic-three"></div>
-      </div>
-      <div class="case-picture-after-section-three"></div>
-    </div>
     <router-link to="/Boardroom" style="color: inherit">
       <h1 class="next-project">NEXT PROJECT</h1>
     </router-link>
@@ -229,17 +218,6 @@ export default {
   overflow: hidden;
 }
 
-.case-pic-two {
-  margin-top: 30vw;
-}
-
-.img-one {
-  position: relative;
-  width: 120%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 .launch-project-case {
   position: relative;
   font-weight: normal;
@@ -340,9 +318,13 @@ export default {
   width: 84vw;
 }
 
+.case-pic-two {
+  margin-top: 30vw;
+}
+
 .case-pic-header-optional {
   font-weight: normal;
-  font-size: 25px;
+  font-size: 32px;
   margin-top: 30vw;
 
   text-align: left;
@@ -411,14 +393,6 @@ export default {
 }
 .section-two-pic-one {
   margin-top: 150px;
-}
-
-.case-picture-after-section-two {
-  width: 100vw;
-  height: 60vw;
-  background: #fff7ee;
-  margin-top: 150px;
-  overflow: hidden;
 }
 
 .img-after-two {
