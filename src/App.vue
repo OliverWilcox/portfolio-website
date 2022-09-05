@@ -139,7 +139,7 @@ html {
   position: relative;
   width: 100vw;
   height: 65vw;
-  background: none;
+  background: rgb(197, 197, 197);
   margin-top: 80px;
   overflow: hidden;
 }

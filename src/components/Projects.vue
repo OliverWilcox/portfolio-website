@@ -4,28 +4,28 @@
   </div>
 
   <div class="container" v-for="post in postItems" :key="post._id">
-    <!--   <router-link
+    <router-link
       :to="`/blog/${post.slug.current}`"
       style="text-decoration: none; color: inherit"
-    > !-->
-    <div
-      class="projects-container"
-      id="projects"
-      v-on:mouseover="cursorOneFunc(), $emit('mouseenter', $event)"
-      v-on:mouseleave="cursorOneFuncLeave(), $emit('mouseleave', $event)"
     >
-      <h3 class="proj-num">{{ post.caseNum }}</h3>
-      <h1 class="proj-name" ref="work">
-        {{ post.caseTitleFull }}: {{ post.caseBio }}
-      </h1>
+      <div
+        class="projects-container"
+        id="projects"
+        v-on:mouseover="cursorOneFunc(), $emit('mouseenter', $event)"
+        v-on:mouseleave="cursorOneFuncLeave(), $emit('mouseleave', $event)"
+      >
+        <h3 class="proj-num">{{ post.caseNum }}</h3>
+        <h1 class="proj-name" ref="work">
+          {{ post.caseTitleFull }}: {{ post.caseBio }}
+        </h1>
 
-      <h3 class="description" ref="description">
-        {{}} MY GOAL IS TO USE CREATIVITY, ABSTRACTION, MINIMALISM AND MOTION
-        DESIGN WITH FUNCTIONALITY. I WANT TO CREATE A SEAMLESS JOURNEY FOR THE
-        WEBSITES I MAKE, SHOWING A STORY AND BRAND IMAGE.
-      </h3>
-    </div>
-    <!-- </router-link>!-->
+        <h3 class="description" ref="description">
+          {{}} MY GOAL IS TO USE CREATIVITY, ABSTRACTION, MINIMALISM AND MOTION
+          DESIGN WITH FUNCTIONALITY. I WANT TO CREATE A SEAMLESS JOURNEY FOR THE
+          WEBSITES I MAKE, SHOWING A STORY AND BRAND IMAGE.
+        </h3>
+      </div>
+    </router-link>
   </div>
 </template>
 <script>
