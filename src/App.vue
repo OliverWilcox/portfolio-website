@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <Nav />
     <Cursor />
     <div id="scrollview"></div>
     <router-view />
   </div>
 </template>
 <script>
-import Nav from "../src/components/nav.vue";
 import Cursor from "../src/components/Cursor.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default {
   components: {
-    Nav,
     Cursor,
   },
   mounted() {},
@@ -37,7 +34,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  background: #e9e9e9;
+  background: #f6f6f6;
   scroll-behavior: smooth;
 }
 h1,

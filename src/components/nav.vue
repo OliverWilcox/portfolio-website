@@ -1,11 +1,20 @@
 <template>
   <div class="nav" id="nav">
-    <div class="burger" v-on:click="isBurgerActive = !isBurgerActive">menu</div>
+    <div
+      class="burger"
+      v-on:mouseover="$emit('mouseenter', $event)"
+      v-on:mouseleave="$emit('mouseleave', $event)"
+      v-on:click="isBurgerActive = !isBurgerActive"
+    >
+      menu
+    </div>
   </div>
   <div class="burger-menu" v-bind:class="{ menuActive: isBurgerActive }">
     <div
       class="nav-title-container home-title-container"
       v-bind:class="{ contActive: isBurgerActive }"
+      v-on:mouseover="$emit('mouseenter', $event)"
+      v-on:mouseleave="$emit('mouseleave', $event)"
     >
       <h2
         class="nav-home nav-titles"
@@ -19,6 +28,8 @@
     <div
       class="nav-title-container work-title-container"
       v-bind:class="{ contActive: isBurgerActive }"
+      v-on:mouseover="$emit('mouseenter', $event)"
+      v-on:mouseleave="$emit('mouseleave', $event)"
     >
       <h2
         class="nav-work nav-titles"
@@ -31,6 +42,8 @@
     <div
       class="nav-title-container contact-title-container"
       v-bind:class="{ contActive: isBurgerActive }"
+      v-on:mouseover="$emit('mouseenter', $event)"
+      v-on:mouseleave="$emit('mouseleave', $event)"
     >
       <h2
         class="nav-contact nav-titles"
@@ -46,6 +59,8 @@
         class="nav-email nav-bios"
         href="https://github.com/OliverWilcox"
         v-on:click="isBurgerActive == false"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
         v-bind:class="{ navBioActive: isBurgerActive }"
       >
         Email
@@ -57,6 +72,8 @@
         class="nav-dribbble nav-bios"
         href="https://dribbble.com/NotTheRealOne"
         v-on:click="isBurgerActive == false"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
         v-bind:class="{ navBioActive: isBurgerActive }"
       >
         Dribbble
@@ -68,6 +85,8 @@
         class="nav-github nav-bios"
         href="https://github.com/OliverWilcox"
         v-on:click="isBurgerActive == false"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
         v-bind:class="{ navBioActive: isBurgerActive }"
       >
         Github
@@ -78,6 +97,8 @@
         class="nav-linkedin nav-bios"
         href="https://dribbble.com/NotTheRealOne"
         v-on:click="isBurgerActive == false"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
         v-bind:class="{ navBioActive: isBurgerActive }"
       >
         LinkedIn
@@ -92,6 +113,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "nav",
+  emits: ["mouseenter", "mouseleave"],
   props: {},
   data: () => ({
     isBurgerActive: false,
@@ -157,6 +179,7 @@ export default {
   top: 5vw;
   font-size: 3.75vw;
   font-family: sk-modernist;
+  cursor: pointer;
 }
 
 .nav {
@@ -206,15 +229,19 @@ export default {
 .home-title-container {
   width: 160px;
   margin-top: 12vh;
+  cursor: pointer;
 }
 .about-title-container {
   width: 190px;
+  cursor: pointer;
 }
 .work-title-container {
   width: 220px;
+  cursor: pointer;
 }
 .contact-title-container {
   width: 250px;
+  cursor: pointer;
 }
 
 .nav-bio-container {
@@ -242,6 +269,7 @@ export default {
   display: block;
   text-decoration: none;
   font-family: sk-modernist;
+  cursor: pointer;
 }
 .navHomeActive {
   margin-top: -10px;
@@ -321,6 +349,11 @@ export default {
   .home-title-container {
     width: 16vw;
     margin-top: 8vh;
+    height: 6.5vw;
+  }
+
+  .contact-title-container {
+    margin-top: 1.8vw;
   }
 
   .about-title-container {

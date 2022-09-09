@@ -38,11 +38,11 @@ export default {
 .contact-text {
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 8vw;
+  font-size: 9vw;
   margin-top: 8vw;
 }
 .contact-socials-container {
-  width: 67vw;
+  width: 75vw;
   height: 4vw;
 
   margin: auto;
@@ -70,7 +70,7 @@ export default {
 
 .linkedin-contact {
   text-align: right;
-  right: 16.5%;
+  right: 12.5%;
 }
 
 @media screen and (max-width: 700px) {

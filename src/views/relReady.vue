@@ -31,12 +31,23 @@
       sure to use very smooth and gentle animations for the text and other
       elements to capture the relaxing feeling.
     </p>
-    <div class="case-picture case-pic-two">
+    <div class="case-picture case-pic-two" v-if="post.caseImageTwo">
       <img :src="imageUrlFor(post.caseImageTwo)" alt="" class="case-img" />
     </div>
-    <h1 class="case-pic-header optional-header">
+    <h1
+      class="case-pic-header optional-header"
+      v-if="post.caseImageOptionalOne"
+    >
       The use of animation in design
     </h1>
+    <p class="case-pic-bio">
+      Breakpack is a website for an independent record label. The goal was to
+      create something that is peak minimal design at its core. The brief for
+      this project was for the site to be very bare-bones so I went through and
+      gave it a somewhat rough-around-the-edges and minimal look, which you see
+      done quite a lot in the independent label space. the design was somewhat
+      inspired of the Whities label website AD 93.
+    </p>
     <div
       class="case-picture case-pic-optional-one"
       v-if="post.caseImageOptionalOne"
@@ -47,38 +58,23 @@
         class="case-img"
       />
     </div>
-    <div class="case-picture case-pic-three">
+    <div class="case-picture case-pic-three" v-if="post.caseImageThree">
       <img :src="imageUrlFor(post.caseImageThree)" alt="" class="case-img" />
     </div>
-    <p class="case-pic-bio">
-      a meditative beach pallete mixed with soft animations built with GSAP
-    </p>
-    <div
-      class="case-picture case-pic-optional-two"
-      v-if="post.caseImageOptionalTwo"
-    >
-      <img
-        :src="imageUrlFor(post.caseImageOptionalTwo)"
-        alt=""
-        class="case-img"
-      />
-    </div>
-    <div
-      class="case-picture case-pic-optional-three"
-      v-if="post.caseImageOptionalThree"
-    >
-      <img
-        :src="imageUrlFor(post.caseImageOptionalThree)"
-        alt=""
-        class="case-img"
-      />
-    </div>
-    <p class="case-pic-bio case-pic-bio-optional">
-      a meditative beach pallete mixed with soft animations built with GSAP
-    </p>
+
     <h1 class="case-pic-header">Technologies used: Vue.js, GSAP and Sanity</h1>
-    <div class="case-picture case-pic-four">
-      <img :src="imageUrlFor(post.caseImageFour)" alt="" class="case-img" />
+    <p class="case-pic-bio">
+      The project was made in Vue.js (vue2) and used gsap for scrolltirgger and
+      splittext animations. I then used sanity so the client could change parts
+      of the page to their need such as client stories and testimonials or bios,
+      titles and headers.
+    </p>
+    <div class="case-picture case-pic-four" v-if="post.caseImageFour">
+      <img
+        :src="imageUrlFor(post.caseImageFour)"
+        alt=""
+        class="case-img img-four"
+      />
     </div>
 
     <router-link to="/Boardroom" style="color: inherit">
@@ -202,10 +198,6 @@ export default {
 </script>
 
 <style>
-.case-img {
-  width: 100%;
-  position: relative;
-}
 .case-container {
   text-align: left;
   font-family: sk-modernist;
@@ -277,8 +269,10 @@ export default {
 .case-picture {
   position: relative;
   width: 100vw;
-
+  height: 58vw;
+  background: blue;
   margin-top: 80px;
+  overflow: hidden;
 }
 
 .launch-project-case {
@@ -397,28 +391,20 @@ export default {
   width: 80vw;
 }
 
-.case-pic-optional-one {
-  margin-top: 15vw;
+.case-pic-bio {
+  margin-top: 25px;
+  margin-left: 8vw;
+  text-align: left;
+  width: 84vw;
+  font-size: 16px;
 }
 
 .case-pic-three {
-  margin-top: 8vw;
-}
-
-.case-pic-bio {
-  margin: auto;
-  margin-top: 25px;
-  text-align: center;
-  width: 84vw;
-  font-size: 18px;
-}
-
-.case-pic-optional-two {
   margin-top: 30vw;
 }
 
-.case-pic-optional-three {
-  margin-top: 8vw;
+.case-pic-optional-one {
+  margin-top: 15vw;
 }
 
 .case-pic-four {
@@ -440,6 +426,14 @@ export default {
   text-decoration: underline;
 }
 
+.case-img {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  top: 50%;
+  position: relative;
+}
+
 @keyframes caseTitle {
   0% {
     margin-top: 15vw;
@@ -448,58 +442,35 @@ export default {
     margin-top: 0;
   }
 }
-@keyframes caseRole {
-  0% {
-    margin-top: 10vw;
-  }
-  100% {
-    margin-top: 0;
-  }
-}
+
 @media screen and (min-width: 701px) {
   .word-one {
-    margin-top: 38vh;
-    line-height: 7vw;
-    font-size: 7vw;
-
-    height: 7vw;
-    transform: translateY(-50%);
-  }
-  .word-two {
-    margin-top: 0;
-    line-height: 6vw;
-    font-size: 7vw;
-    height: 7vw;
+    margin-top: 28vh;
+    line-height: 2vw;
+    font-size: 1.3vw;
+    font-family: sk-modernist;
+    height: 2vw;
 
     transform: translateY(-50%);
   }
   .role {
-    margin-top: 60px;
-    font-family: sk-modernist;
-    font-size: 1.5vw;
-    height: 3vw;
-
-    overflow: hidden;
-    transform: translateY(-50%);
+    font-family: sk-modernist-bold;
+    font-size: 4.5vw;
+    margin-top: 4vw;
+    width: 50vw;
+    line-height: 5.5vw;
   }
   .case-picture {
     position: relative;
     width: 100vw;
-    height: 55vw;
-    background: none;
-    margin-top: 130px;
   }
+
   .img-one {
     position: relative;
     width: 100%;
     left: 50%;
     top: 20%;
     transform: translate(-50%, -50%);
-  }
-  .case-picture-after-project-info {
-    width: 87vw;
-    margin-left: 6.5vw;
-    height: 49vw;
   }
   .client {
     position: absolute;
@@ -546,93 +517,98 @@ export default {
     width: 45vw;
   }
 
-  .section-two-title {
-    position: relative;
-    font-weight: normal;
-    font-size: 5.4vw;
-    line-height: 5.4vw;
-    display: none;
-    text-align: left;
-    margin-left: 12vw;
-    width: 50vw;
-    font-family: sk-modernist;
-    font-weight: normal;
-  }
-  .section-two-bio {
-    font-weight: normal;
-    font-size: 22px;
-    width: 60vw;
-    margin-left: 10vw;
-    text-align: left;
-    line-height: 30px;
-    margin-top: calc(50px - 60px);
-    font-family: sk-modernist;
-  }
-  .section-two-pics {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(10vw - 40px);
-    margin-top: 280px;
-  }
-  .section-two-pic {
-    width: 38vw;
-    height: 38vw;
-    margin-left: 40px;
-    margin-top: 100px;
-    background: none;
-  }
-  .animation-pic-one {
-    margin-top: 280px;
-    background: none;
-    height: 55vw;
-  }
-  .img-branding {
-    position: relative;
-    width: 100%;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-  }
-
-  .section-two-pic-one {
-    margin-top: 00px;
-    height: 52vw;
-  }
-  .section-two-pic-two {
-    margin-top: 300px;
-    height: 52vw;
-  }
-  .section-two-pic-three {
-    margin-top: calc(-45px - 15vw);
-    height: 52vw;
-  }
-  .img-branding-pics {
-    position: relative;
-    width: 120%;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-  }
-  .case-picture-after-section-two {
+  .case-pic-two {
     width: 87vw;
     margin-left: 6.5vw;
-    margin-top: 300px;
-    height: 49vw;
-    background: blue;
+    height: 40vw;
+    margin-top: 15vw;
+    overflow: hidden;
   }
-  .img-after-two {
-    top: 20%;
-    left: 50%;
-    position: relative;
-    width: 115%;
-    transform: translate(-50%, -50%);
+
+  .case-pic-header {
+    font-weight: normal;
+    font-size: 5vw;
+    margin-top: 24vw;
+
+    text-align: left;
+    font-family: sk-modernist-bold;
+    font-weight: normal;
+    margin-left: 8vw;
+    width: 50vw;
+  }
+
+  .case-pic-optional-one {
+    margin-top: 15vw;
+    width: 40vw;
+    left: 8.5vw;
+  }
+
+  .case-pic-three {
+    margin-top: -40vw;
+
+    width: 40vw;
+    left: calc(72.5vw - 20vw);
+  }
+
+  .case-pic-bio {
+    margin-left: 61.5vw;
+    margin-top: 2vw;
+
+    width: 24vw;
+    font-size: 1.6vw;
+  }
+
+  .case-pic-bio-optional {
+    margin: 0 auto;
+    margin-top: 2vw;
+    width: 50vw;
+  }
+
+  .case-pic-optional-two {
+    margin-top: 30vw;
+    width: 87vw;
+    margin-left: 6.5vw;
+    height: 49vw;
+  }
+
+  .case-pic-optional-three {
+    margin-top: 8vw;
+    width: 87vw;
+    margin-left: 6.5vw;
+    height: 49vw;
+  }
+
+  .case-pic-four {
+    margin-top: 30vw;
+    width: 87vw;
+    margin-left: 6.5vw;
+    height: auto;
+  }
+
+  .img-four {
+    margin-top: -20vw;
   }
 
   .next-project {
-    margin-top: 280px;
+    position: relative;
+    font-weight: normal;
+    margin: auto;
+    text-align: center;
+    margin-top: 120px;
 
-    font-size: 5vw;
-    margin-bottom: 160px;
+    font-size: 11vw;
+    margin-bottom: 150px;
+
+    height: 11vw;
+
+    text-decoration: underline;
+  }
+
+  .next-project {
+    margin-top: 180px;
+
+    font-size: 4vw;
+    margin-bottom: 150px;
 
     height: 10vw;
   }

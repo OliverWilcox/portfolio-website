@@ -1,4 +1,5 @@
 <template>
+  <Nav v-on:mouseenter="hover = true" @mouseleave="hover = false" />
   <div class="cursor-container" ref="cursor">
     <div class="cursor" v-bind:class="{ cursorActive: hover }"></div>
   </div>
@@ -58,7 +59,7 @@
 
 <script>
 // @ is an alias to /src
-
+import Nav from "/src/components/nav.vue";
 import Projects from "../components/Projects.vue";
 import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
@@ -69,6 +70,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "Home",
   components: {
+    Nav,
     Projects,
     About,
     Contact,
