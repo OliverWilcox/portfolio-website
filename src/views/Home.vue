@@ -31,7 +31,18 @@
     </div>
 
     <div class="section-part">
-      <div class="shape"></div>
+      <div class="shape">
+        <svg
+          width="9"
+          height="9"
+          viewBox="0 0 9 9"
+          fill="none"
+          class="svg"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0L4.5 4.5L9 9H0V0Z" fill="#030303" />
+        </svg>
+      </div>
       <p class="project-part">projects</p>
       <p class="section-text-part">section 01</p>
     </div>
@@ -274,16 +285,24 @@ export default {
 }
 
 .section-part {
-  margin-top: -4.5vw;
+  margin-top: -3.5vw;
   width: 100vw;
   height: 1.5vw;
 }
 .section-part p {
   position: absolute;
   font-family: sk-modernist-bold;
-
+  margin-top: 0.1vw;
   text-transform: capitalize;
   font-size: 1vw;
+}
+
+.svg {
+  position: absolute;
+  left: 3vw;
+  width: 0.8vw;
+  height: 0.8vw;
+  margin-top: 0.3vw;
 }
 
 .about-section p {
@@ -426,6 +445,13 @@ export default {
   .section-part p {
     font-size: 3.5vw;
     margin-top: -6vw;
+  }
+  .svg {
+    position: absolute;
+    left: 5vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-top: -4.8vw;
   }
   .about-section {
     position: relative;

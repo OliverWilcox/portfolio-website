@@ -458,6 +458,7 @@ export default {
   .case-picture {
     position: relative;
     width: 100vw;
+    height: 40vw;
   }
 
   .img-one {
@@ -522,8 +523,8 @@ export default {
 
   .case-pic-header {
     font-weight: normal;
-    font-size: 5vw;
-    margin-top: 24vw;
+    font-size: 4vw;
+    margin-top: 15vw;
 
     text-align: left;
     font-family: sk-modernist-bold;
@@ -532,25 +533,24 @@ export default {
     width: 50vw;
   }
 
+  .case-pic-bio {
+    margin-left: 8vw;
+    margin-top: 2vw;
+
+    width: 50vw;
+    font-size: 1.2vw;
+  }
+
   .case-pic-optional-one {
-    margin-top: 15vw;
-    width: 40vw;
-    left: 8.5vw;
+    margin-top: 8vw;
+    width: 100vw;
+    left: 0vw;
   }
 
   .case-pic-three {
-    margin-top: -40vw;
-
-    width: 40vw;
-    left: calc(72.5vw - 20vw);
-  }
-
-  .case-pic-bio {
-    margin-left: 61.5vw;
-    margin-top: 2vw;
-
-    width: 24vw;
-    font-size: 1.6vw;
+    margin-top: 15vw;
+    margin-left: 6.5vw;
+    width: 87vw;
   }
 
   .case-pic-bio-optional {
@@ -574,7 +574,7 @@ export default {
   }
 
   .case-pic-four {
-    margin-top: 30vw;
+    margin-top: 8vw;
   }
 
   .next-project {

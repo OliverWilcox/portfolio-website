@@ -4,7 +4,7 @@
       class="designer-title"
       v-bind:class="{ designerTitleActive: isDesignerTitleActive }"
     >
-      DESIGNER DESIGNER DESIGNER
+      DESIGNER DEVELOPER DESIGNER
     </h1>
   </div>
 </template>
@@ -50,7 +50,7 @@ export default {
         scrub: 1,
       },
 
-      x: -220,
+      x: -600,
     });
     gsap.to(".developer-title", {
       scrollTrigger: {
@@ -60,7 +60,7 @@ export default {
         scrub: 1,
       },
 
-      x: 220,
+      x: 600,
     });
     /*
     gsap.to(".about", {
@@ -115,7 +115,7 @@ export default {
     height: 22vw;
   }
   .designer-title {
-    left: -10vw;
+    left: 0vw;
     margin-top: 1vw;
     font-size: 16vw;
   }
