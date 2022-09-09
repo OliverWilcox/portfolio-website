@@ -449,9 +449,9 @@ export default {
   .svg {
     position: absolute;
     left: 5vw;
-    width: 2.5vw;
-    height: 2.5vw;
-    margin-top: -4.8vw;
+    width: 2.4vw;
+    height: 2.4vw;
+    top: -4.6vw;
   }
   .about-section {
     position: relative;
