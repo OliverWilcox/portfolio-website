@@ -34,12 +34,7 @@
     <div class="case-picture case-pic-two" v-if="post.caseImageTwo">
       <img :src="imageUrlFor(post.caseImageTwo)" alt="" class="case-img" />
     </div>
-    <h1
-      class="case-pic-header optional-header"
-      v-if="post.caseImageOptionalOne"
-    >
-      The use of animation in design
-    </h1>
+    <h1 class="case-pic-header">The use of animation in design</h1>
     <p class="case-pic-bio">
       Breakpack is a website for an independent record label. The goal was to
       create something that is peak minimal design at its core. The brief for
@@ -270,7 +265,7 @@ export default {
   position: relative;
   width: 100vw;
   height: 58vw;
-  background: blue;
+  background: none;
   margin-top: 80px;
   overflow: hidden;
 }
@@ -580,13 +575,6 @@ export default {
 
   .case-pic-four {
     margin-top: 30vw;
-    width: 87vw;
-    margin-left: 6.5vw;
-    height: auto;
-  }
-
-  .img-four {
-    margin-top: -20vw;
   }
 
   .next-project {
@@ -611,6 +599,10 @@ export default {
     margin-bottom: 150px;
 
     height: 10vw;
+  }
+
+  .case-img {
+    width: 100vw;
   }
 }
 
