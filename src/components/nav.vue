@@ -191,7 +191,7 @@ export default {
 }
 .burger-menu {
   position: fixed;
-  background: #e9e9e9;
+  background: #f0f0f0;
   width: 100vw;
   height: 100vh;
   top: 100%;
