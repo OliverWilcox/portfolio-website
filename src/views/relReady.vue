@@ -24,24 +24,14 @@
     </div>
     <h3 class="project-info-title">The Project</h3>
     <p class="project-info-bio">
-      Relationship Ready is a dating and relationship coaching program. For the
-      design we wanted to ensure a welcoming, meditative and relaxing experience
-      for the user to express their emotion and feel comfortable. For this we
-      used a color pallete which reflected the color pallete of a beach. I made
-      sure to use very smooth and gentle animations for the text and other
-      elements to capture the relaxing feeling.
+      {{ post.projectInfo }}
     </p>
     <div class="case-picture case-pic-two" v-if="post.caseImageTwo">
       <img :src="imageUrlFor(post.caseImageTwo)" alt="" class="case-img" />
     </div>
-    <h1 class="case-pic-header">The use of animation in design</h1>
+    <h1 class="case-pic-header">{{ post.caseHeaderOne }}</h1>
     <p class="case-pic-bio">
-      Breakpack is a website for an independent record label. The goal was to
-      create something that is peak minimal design at its core. The brief for
-      this project was for the site to be very bare-bones so I went through and
-      gave it a somewhat rough-around-the-edges and minimal look, which you see
-      done quite a lot in the independent label space. the design was somewhat
-      inspired of the Whities label website AD 93.
+      {{ post.caseParagraphOne }}
     </p>
     <div
       class="case-picture case-pic-optional-one"
@@ -57,12 +47,9 @@
       <img :src="imageUrlFor(post.caseImageThree)" alt="" class="case-img" />
     </div>
 
-    <h1 class="case-pic-header">Technologies used: Vue.js, GSAP and Sanity</h1>
+    <h1 class="case-pic-header">{{ post.caseHeaderTwo }}</h1>
     <p class="case-pic-bio">
-      The project was made in Vue.js (vue2) and used gsap for scrolltirgger and
-      splittext animations. I then used sanity so the client could change parts
-      of the page to their need such as client stories and testimonials or bios,
-      titles and headers.
+      {{ post.caseParagraphTwo }}
     </p>
     <div class="case-picture case-pic-four" v-if="post.caseImageFour">
       <img
@@ -92,7 +79,11 @@ const query = `*[slug.current == $slug] {
    caseCategory,
    caseYear,
    caseClient,
-   caseAbout,
+   projectInfo,
+   caseHeaderOne,
+   caseParagraphOne,
+   caseHeaderTwo,
+   caseParagraphTwo,
    caseImageOne,
    caseImageTwo,
    caseImageThree,

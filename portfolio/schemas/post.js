@@ -56,6 +56,41 @@ export default {
     type: 'string'
     },
     {
+      name: 'launchText',
+      title: 'Launch Text',
+      type: 'string'
+    },
+    {
+      name: 'launchLink',
+      title: 'Launch Link',
+      type: 'string'
+    },
+    {
+      name: 'projectInfo',
+      title: 'Project Info',
+      type: 'string'
+    },
+    {
+      name: 'caseHeaderOne',
+      title: 'Case Header One',
+      type: 'string'
+    },
+    {
+      name: 'caseParagraphOne',
+      title: 'Case Paragraph One',
+      type: 'string'
+    },
+    {
+      name: 'caseHeaderTwo',
+      title: 'Case Header Two',
+      type: 'string'
+    },
+    {
+      name: 'caseParagraphTwo',
+      title: 'Case Paragraph Two',
+      type: 'string'
+    },
+    {
 			name: "caseImageOne",
 			title: "Case Image One",
 			type: "image"
@@ -90,6 +125,8 @@ export default {
 			title: "Case Image Optional Three",
 			type: "image"
 		},
+
+   
     
     {
       name: 'slug',
