@@ -86,6 +86,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'caseNextProject',
+      title: 'Case Next Project',
+      type: 'slug'
+    },
+    {
       name: 'caseParagraphTwo',
       title: 'Case Paragraph Two',
       type: 'string'

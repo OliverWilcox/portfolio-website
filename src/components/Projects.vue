@@ -5,7 +5,7 @@
 
   <div class="container" v-for="post in postItems" :key="post._id">
     <router-link
-      :to="`/blog/${post.slug.current}`"
+      :to="`/project-info/${post.slug.current}`"
       style="text-decoration: none; color: inherit"
     >
       <div

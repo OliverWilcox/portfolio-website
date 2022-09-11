@@ -330,7 +330,7 @@ export default {
 }
 .line-remove {
   position: relative;
-  background: #e9e9e9;
+  background: #f6f6f6;
   width: 76vw;
   height: 3px;
   z-index: +10;
@@ -484,6 +484,7 @@ export default {
   .line-remove {
     width: 92vw;
     height: 5px;
+
     margin-top: 2.5vw;
   }
   .view-designs {

@@ -14,7 +14,7 @@ const routes = [
     component: aboutMe
   },
   {
-    path: "/blog/:slug",
+    path: "/project-info/:slug",
     name: "relReady",
     component: () => import("../views/relReady.vue"),
   

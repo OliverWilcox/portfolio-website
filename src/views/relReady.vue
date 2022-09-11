@@ -12,7 +12,9 @@
     <div class="case-picture case-pic-one">
       <img :src="imageUrlFor(post.caseImageOne)" alt="" class="case-img" />
     </div>
-    <p class="launch-project-case">In Progress</p>
+    <p class="launch-project-case">
+      <a v-bind:href="post.launchLink" class="">{{ post.launchText }}</a>
+    </p>
     <div class="launch-line"></div>
     <div class="about-container-one">
       <h3 class="category">Category</h3>
@@ -59,8 +61,8 @@
       />
     </div>
 
-    <router-link to="/Boardroom" style="color: inherit">
-      <h1 class="next-project">Next case</h1>
+    <router-link to="/" style="color: inherit">
+      <h1 class="next-project">Back home</h1>
     </router-link>
   </div>
 </template>
@@ -79,11 +81,14 @@ const query = `*[slug.current == $slug] {
    caseCategory,
    caseYear,
    caseClient,
+   launchText,
+   launchLink,
    projectInfo,
    caseHeaderOne,
    caseParagraphOne,
    caseHeaderTwo,
    caseParagraphTwo,
+   caseNextProject,
    caseImageOne,
    caseImageTwo,
    caseImageThree,
@@ -92,6 +97,7 @@ const query = `*[slug.current == $slug] {
    caseImageOptionalTwo,
    caseImageOptionalThree,
    slug,
+   caseNextProject
    
   }[0]
 `;
