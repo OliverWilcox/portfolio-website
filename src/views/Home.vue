@@ -51,7 +51,11 @@
 
     <div class="line-remove"></div>
 
-    <p class="view-designs">View design projects</p>
+    <p class="view-designs">
+      <a href="https://dribbble.com/NotTheRealOne" class="link"
+        >View design projects</a
+      >
+    </p>
     <About />
     <div class="designer-line"></div>
     <div class="about-section">
@@ -64,7 +68,7 @@
       for 3 years. I am always trying to learn and improve.
     </p>
 
-    <Contact />
+    <Contact v-on:mouseenter="hover = true" @mouseleave="hover = false" />
   </div>
 </template>
 
@@ -157,6 +161,9 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: black;
+}
 .cursor-container {
   position: fixed;
   z-index: +100;

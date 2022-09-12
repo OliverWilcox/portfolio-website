@@ -57,7 +57,7 @@
     <div class="nav-bio-container email-bio-container">
       <a
         class="nav-email nav-bios"
-        href="https://github.com/OliverWilcox"
+        href="mailto: oliverbrodywilcox@gmail.com"
         v-on:click="isBurgerActive == false"
         v-on:mouseover="$emit('mouseenter', $event)"
         v-on:mouseleave="$emit('mouseleave', $event)"
@@ -163,6 +163,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: black;
+}
 .nav {
   position: fixed;
   width: 100vw;

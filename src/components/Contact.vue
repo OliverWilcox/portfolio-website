@@ -2,10 +2,34 @@
   <div class="contact-container" id="contact">
     <h1 class="contact-text">lets get in touch</h1>
     <div class="contact-socials-container">
-      <p class="email-contact">email</p>
-      <p class="dribbble-contact">dribbble</p>
-      <p class="github-contact">github</p>
-      <p class="linkedin-contact">linkedin</p>
+      <p
+        class="email-contact"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
+      >
+        <a href="mailto: oliverbrodywilcox@gmail.com" class="link">email</a>
+      </p>
+      <p
+        class="dribbble-contact"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
+      >
+        <a href="https://dribbble.com/NotTheRealOne" class="link">dribbble</a>
+      </p>
+      <p
+        class="github-contact"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
+      >
+        <a href="https://github.com/OliverWilcox" class="link">github</a>
+      </p>
+      <p
+        class="linkedin-contact"
+        v-on:mouseover="$emit('mouseenter', $event)"
+        v-on:mouseleave="$emit('mouseleave', $event)"
+      >
+        <a href="" class="link">linkedin</a>
+      </p>
     </div>
   </div>
 </template>
@@ -21,6 +45,7 @@ export default {
   data: () => ({
     social: [],
   }),
+  emits: ["mouseenter", "mouseleave"],
   mounted() {
     /*
     ScrollTrigger.create({
@@ -35,6 +60,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: black;
+}
 .contact-text {
   text-transform: uppercase;
   font-weight: normal;
