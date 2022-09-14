@@ -324,7 +324,6 @@ a {
   position: absolute;
   font-family: sk-modernist;
   font-weight: normal;
-  text-transform: capitalize;
   font-size: 1vw;
   text-align: left;
 }
