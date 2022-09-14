@@ -20,9 +20,7 @@
         </h1>
 
         <h3 class="description" ref="description">
-          {{}} MY GOAL IS TO USE CREATIVITY, ABSTRACTION, MINIMALISM AND MOTION
-          DESIGN WITH FUNCTIONALITY. I WANT TO CREATE A SEAMLESS JOURNEY FOR THE
-          WEBSITES I MAKE, SHOWING A STORY AND BRAND IMAGE.
+          {{ post.projectInfo }}
         </h3>
       </div>
     </router-link>
@@ -39,6 +37,7 @@ const queryPost = `* [_type == "post"] | order(caseNum asc){
   caseTitleFull,
   caseBio,
   caseDescription,
+  projectInfo,
   slug,
   caseNum,
  
@@ -222,7 +221,7 @@ li a {
   margin: 0;
   margin-left: 7.5vw;
   font-family: sk-modernist;
-  text-transform: lowercase;
+
   color: #6f7780;
   z-index: +10;
 }
