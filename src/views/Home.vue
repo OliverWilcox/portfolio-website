@@ -17,7 +17,7 @@
         </h1>
         <p class="place">
           My goal is to use creativity, abstraction, minimalism and motion
-          deisgn with functionality. I want to create a seamless joutnry for the
+          deisgn with functionality. I want to create a seamless journey for the
           websites I make, showing a story and brand image.
         </p>
         <p
