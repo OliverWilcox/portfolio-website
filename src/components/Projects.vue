@@ -214,7 +214,7 @@ li a {
 .description {
   position: relative;
 
-  width: 18vw;
+  width: 24vw;
   text-align: right;
   font-weight: normal;
   font-size: 1vw;
